@@ -33,11 +33,11 @@ $("form").on("submit", (event) => {
     const foodItem = $('input').val();
     getRecipes(foodItem);
 });
-$("button").on("click", (event) => {
-let random = Math.floor(Math.random() * data.meals.length) 
+// $("button").on("click", (event) => {
+// let random = Math.floor(Math.random() * data.meals.length) 
 
-    getRecipes(random);
-// });
+//     getRecipes(random);
+// // });
 
 
 
@@ -47,7 +47,8 @@ let random = Math.floor(Math.random() * data.meals.length)
 
 // });
 // // Make a button or div with an id="chicken" and you can attach this click listener:
-$('#button1').on('click', () => {getRecipes("#button1")})
+$('#button1').on('click', () => {getRecipes("#button1")}) //hard code this one
+$('#button2').on('click', () => {getRecipes("#button1")})
 
 
 
