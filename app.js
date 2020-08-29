@@ -15,10 +15,11 @@ const getRecipes = (foodItem) => {
     }).then(
         (data) => {
         console.log(data);
-        let randomIndex = Math.floor(Math.random() * data.meals.length)
+        let randomIndex = Math.floor(Math.random() * data.meals.length) 
         $('#meal').html(data.meals[randomIndex].strMeal);
-        // $('#video').html(data.meals[randomIndex].strYoutube);  would be nice to dislay hyper link or small video thumb nail
         $("#poster").html(`<img src="${data.meals[randomIndex].strMealThumb}">`);
+        $("#instructions").html(data.meals[randomIndex].strInstructions);
+        $("#fullrecipe").html(data.meals[randomIndex].strSource);
     },
     () => {
         console.log("bad request");
@@ -32,9 +33,21 @@ $("form").on("submit", (event) => {
     const foodItem = $('input').val();
     getRecipes(foodItem);
 });
+$("button").on("click", (event) => {
+let random = Math.floor(Math.random() * data.meals.length) 
 
+    getRecipes(random);
+// });
+
+
+
+// $("#button2").on("click", (event) => {
+//     getRecipes(randomIndex);
+
+
+// });
 // // Make a button or div with an id="chicken" and you can attach this click listener:
-// $('#chicken').on('click', () => {getRecipes("chicken")})
+$('#button1').on('click', () => {getRecipes("#button1")})
 
 
 

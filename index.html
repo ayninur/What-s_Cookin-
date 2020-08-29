@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -17,11 +17,15 @@
     <script src="app.js" defer></script>
 </head>
 <body>
+
+    <div class="container">
+
     <form>
         <input type="text" placeholder="Feeling like...">
         <input type="submit" value="Get recipe" id="">
     </form>
-    <h1>What's for dinner tonight?</h1>
+    <div class="announcement">
+    <h1>What's for dinner?</h1>
     <div id="poster"></div>
     <dl>
         <dt>Dinner tonight is:</dt>
@@ -29,7 +33,79 @@
         <dt>Recipe:</dt>
         <dd id="instructions">Loading...</dd>
     </dl>
+    </div>
+    <div class="fridge">
+ 
+      </div>
+    </div>
+
+    </div>
+
 </body> 
 </html>
 </body>
 </html>
+ -->
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What's for Dinner</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What's for dinner?</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="app.js" defer></script>
+</head>
+<body>
+<nav class="sticky">
+    <img src="images/logo2.jpg" class="logo1" alt="">
+    <a href="#"><h3>[what's for dinner?]</h3></a>
+</nav>
+   
+
+    <div class="landing">
+
+        <form>
+            <div class="bar">
+                <input class="searchbar" type="text" title="Search" placeholder="Pasta, soup, salad">
+                <!-- <a href="#"> <img class="voice" src="images/searchlogo.png" title="Search by Voice"></a> -->
+                <button type="submit" class="searchbutton"><img class="voice" src="images/searchlogo.png" type="submit"></button>
+            </div>
+       
+        <div id="buttons">
+            <button class="button" id="button1" type="button">Recipe of the Week</button>
+            <button class="button" id="button2" type="button">I'm Feeling Lucky</button>
+        </div>
+    </form>
+    </div>
+  
+    <div class="return">
+    <!-- <h1>What's for dinner?</h1> -->
+        <p>Dinner tonight is:</p>
+        <h2 id="meal"></h2>
+        <div id="poster"></div>
+        <h2>Instructions</h2>
+        <p id="instructions"></p>
+        <h2>Find full recipe here:</h2>
+        <a id="fullrecipe"></a>
+    </dl>
+    </div>
+   
+    
+
+    
+
+</body> 
+</html>
+</body>
+</html>
+
